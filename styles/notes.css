@@ -1,0 +1,32 @@
+body {
+    background: #888;
+}
+
+li {
+    height: 150px;            /* make them 150 by 150 pixels */
+    width: 150px;
+    border-style: solid;      /* with solid black borders */
+    background: #ffc;         /* and a bright yellow background */
+    list-style: none;         /* get rid of the bullets */
+
+    float: left;              /* arrange left-to-right with wrapping */
+    margin: 15px;             /* leave some space between the notes */
+    padding: 15px;            /* leave some space around the text */
+    box-shadow:
+        5px 5px 7px rgba(33, 33, 33, .7);  /* drop shadow */
+    
+    font-family: 'Rock Salt', cursive;
+    font-weight: bold;
+    font-size: 120%;
+    letter-spacing: 2px;
+}
+
+li:nth-child(3n) {
+    background: #ffc;
+}
+li:nth-child(3n+1) {
+    background: #cfc;
+}
+li:nth-child(3n+2) {
+    background: #f6f;
+}
