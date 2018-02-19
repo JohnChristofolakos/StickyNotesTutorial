@@ -38,8 +38,12 @@ function makeDraggable(elem) {
     }
 }
 
+var prevOnload = window.onload;
 window.onload = function() {
     for (var elem of document.getElementsByClassName("note")) {
         makeDraggable(elem);
     }
+    if (prevOnload) {
+        prevOnload.apply(this, arguments);
+    }
 }

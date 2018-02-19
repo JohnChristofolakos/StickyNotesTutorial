@@ -59,8 +59,12 @@ function cancelEdit() {
     actionBar.querySelector(".done").onclick();
 }
 
+var prevOnload = window.onload;
 window.onload = function() {
     for (var note of document.getElementsByClassName("note")) {
         makeEditable(note);
     }
+    if (prevOnload) {
+        prevOnload.apply(this, arguments);
+    }
 }
