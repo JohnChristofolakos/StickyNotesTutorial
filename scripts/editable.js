@@ -20,6 +20,8 @@ function makeEditable(note) {
     actionBar.appendChild(doneButton);
 }
 
+var savedText;
+
 function startEdit() {
     var actionBar = this.parentElement;
     var note = actionBar.parentElement;
@@ -31,6 +33,9 @@ function startEdit() {
     actionBar.querySelector(".edit").classList.add("button_hidden");
     actionBar.querySelector(".done").classList.remove("button_hidden");
     actionBar.querySelector(".cancel").classList.remove("button_hidden");
+    
+    // save the current text
+    savedText = note.querySelector("textarea").value;
 }
 
 function saveEdit() {
@@ -47,7 +52,11 @@ function saveEdit() {
 }
 
 function cancelEdit() {
-    // TODO
+    var actionBar = this.parentElement;
+    var note = actionBar.parentElement;
+    note.querySelector("textarea").value = savedText;
+
+    actionBar.querySelector(".done").onclick();
 }
 
 window.onload = function() {
