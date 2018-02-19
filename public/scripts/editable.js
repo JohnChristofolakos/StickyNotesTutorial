@@ -1,4 +1,4 @@
-(function() {
+var editable = (function() {
     function makeEditable(note) {
         var actionBar = note.getElementsByClassName("action")[0];
 
@@ -78,4 +78,8 @@
             prevOnload.apply(this, arguments);
         }
     }
+
+    return {
+        makeEditable: makeEditable
+    };
 } () )
