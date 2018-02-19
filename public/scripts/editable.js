@@ -56,6 +56,9 @@
 
         // make it draggable again
         draggable.makeDraggable(note);
+    
+        // save the notes
+        persist.saveNotes();
     }
 
     function cancelEdit() {

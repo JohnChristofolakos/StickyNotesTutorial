@@ -40,6 +40,9 @@ var draggable = (function() {
             // clear the handlers when the mouse button is released
             document.onmousemove = null;
             document.onmouseup = null;
+    
+            // save the notes
+            persist.saveNotes();
         }
     }
 
