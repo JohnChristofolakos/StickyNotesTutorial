@@ -2,7 +2,7 @@ body {
     background: #888;
 }
 
-li {
+.note {
     height: 150px;            /* make them 150 by 150 pixels */
     width: 150px;
     border-style: solid;      /* with solid black borders */
@@ -20,12 +20,12 @@ li {
     letter-spacing: 2px;
 }
 
-li:nth-child(3n) {
+.note:nth-child(3n) {
     background: #ffc;
 }
-li:nth-child(3n+1) {
+.note:nth-child(3n+1) {
     background: #cfc;
 }
-li:nth-child(3n+2) {
+.note:nth-child(3n+2) {
     background: #f6f;
 }

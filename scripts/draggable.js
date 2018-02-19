@@ -39,7 +39,7 @@ function makeDraggable(elem) {
 }
 
 window.onload = function() {
-    for (var elem of document.getElementsByTagName("li")) {
+    for (var elem of document.getElementsByClassName("note")) {
         makeDraggable(elem);
     }
 }
