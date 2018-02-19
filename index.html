@@ -5,12 +5,50 @@
         <link type="text/css" rel="stylesheet" href="styles/notes.css" />
         <link href="http://fonts.googleapis.com/css?family=Rock+Salt"
               rel="stylesheet" />
-  </head>
+        <script>
+            var currX, currY;
+
+            function startDragging() {
+                var e = window.event;
+                var elem = e.currentTarget;
+
+                // get the current mouse cursor position
+                currX = e.clientX;
+                currY = e.clientY;
+
+                // set handlers for mouse move, up
+                elem.onmousemove = continueDragging;
+                elem.onmouseup = endDragging;
+            }
+            function continueDragging() {
+                var e = window.event;
+                var elem = e.currentTarget;
+
+                // calculate the mouse movement
+                offsetX = e.clientX - currX;
+                offsetY = e.clientY - currY;
+                currX = e.clientX;
+                currY = e.clientY;
+
+                // set the element's new position:
+                elem.style.top = (elem.offsetTop + offsetY) + "px";
+                elem.style.left = (elem.offsetLeft + offsetX) + "px";
+            }
+            function endDragging() {
+                var e = window.event;
+                var elem = e.currentTarget;
+
+                // clear the handlers when the mouse button is released
+                elem.onmousemove = null;
+                elem.onmouseup = null;
+            }
+        </script>
+    </head>
     <body>
         <ul>
-            <li>Feed the cat</li>
-            <li>Rake the lawn</li>
-            <li>Tidy the garage</li>
+            <li onmousedown="startDragging()">Feed the cat</li>
+            <li onmousedown="startDragging()">Rake the lawn</li>
+            <li onmousedown="startDragging()">Tidy the garage</li>
         </ul>
     </body>
 </html>

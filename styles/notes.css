@@ -9,8 +9,7 @@ li {
     background: #ffc;         /* and a bright yellow background */
     list-style: none;         /* get rid of the bullets */
 
-    float: left;              /* arrange left-to-right with wrapping */
-    margin: 15px;             /* leave some space between the notes */
+    position: absolute;       /* will be positioned by setting top & left */
     padding: 15px;            /* leave some space around the text */
     box-shadow:
         5px 5px 7px rgba(33, 33, 33, .7);  /* drop shadow */
