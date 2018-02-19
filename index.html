@@ -6,10 +6,20 @@
         <link href="http://fonts.googleapis.com/css?family=Rock+Salt"
               rel="stylesheet" />
         <script src="scripts/draggable.js" type="application/javascript"></script>
+        <script src="scripts/editable.js" type="application/javascript"></script>
     </head>
     <body>
-        <div class="note"><textarea>Feed the cat</textarea></div>
-        <div class="note"><textarea>Take out the garbage</textarea></div>
-        <div class="note"><textarea>Tidy the garage</textarea></div>
+        <div class="note">
+            <div class="action"></div>
+            <textarea readOnly=true>Feed the cat</textarea>
+        </div>
+        <div class="note">
+            <div class="action"></div>
+            <textarea readOnly=true>Take out the garbage</textarea>
+        </div>
+        <div class="note">
+            <div class="action"></div>
+            <textarea readOnly=true>Tidy the garage</textarea>
+        </div>
     </body>
 </html>
