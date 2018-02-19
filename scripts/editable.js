@@ -34,7 +34,16 @@ function startEdit() {
 }
 
 function saveEdit() {
-    // TODO
+    var actionBar = this.parentElement;
+    var note = actionBar.parentElement;
+
+    // update button visibility
+    actionBar.querySelector(".edit").classList.remove("button_hidden");
+    actionBar.querySelector(".done").classList.add("button_hidden");
+    actionBar.querySelector(".cancel").classList.add("button_hidden");
+
+    // make the textarea uneditable
+    note.querySelector("textarea").readOnly = true;
 }
 
 function cancelEdit() {
