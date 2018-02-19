@@ -49,3 +49,8 @@ body {
     opacity: 1;
 }
 
+.button_hidden {
+    display: none;
+}
+
+
